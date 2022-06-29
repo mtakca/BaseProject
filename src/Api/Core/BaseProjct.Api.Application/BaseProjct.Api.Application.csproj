@@ -6,4 +6,29 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Extencions\" />
+    <None Remove="Features\" />
+    <None Remove="Features\CQRS\" />
+    <None Remove="Features\CQRS\Handlers\" />
+    <None Remove="Features\CQRS\Handlers\Commands\" />
+    <None Remove="Features\CQRS\Handlers\Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extencions\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\CQRS\" />
+    <Folder Include="Features\CQRS\Handlers\" />
+    <Folder Include="Features\CQRS\Handlers\Commands\" />
+    <Folder Include="Features\CQRS\Handlers\Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\BaseProject.Common\BaseProject.Common.csproj" />
+  </ItemGroup>
 </Project>

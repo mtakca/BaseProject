@@ -6,4 +6,22 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Models\CQRS\" />
+    <None Remove="Models\CQRS\Queries\" />
+    <None Remove="Models\CQRS\Queries\Requeries\" />
+    <None Remove="Models\CQRS\Queries\Reponse\" />
+    <None Remove="MediatR" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\CQRS\" />
+    <Folder Include="Models\CQRS\Queries\" />
+    <Folder Include="Models\CQRS\Queries\Request\" />
+    <Folder Include="Models\CQRS\Queries\Reponse\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
 </Project>
