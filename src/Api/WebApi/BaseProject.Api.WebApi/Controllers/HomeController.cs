@@ -28,8 +28,30 @@ namespace BaseProject.Api.WebApi.Controllers
             return Ok(res);	    
 	    }
 
+        [HttpGet]
+        [Route("bölme-islemi")]
+        public async Task<IActionResult> Bolme([FromQuery] HomeBolmeQueryRequest request)
+        {
+            var res = await _mediator.Send(request);
+            return Ok(res);
+        }
         
-	   
+	   [HttpGet]
+       [Route ("toplama-islemi")]
+       public async Task<IActionResult> Toplama([FromQuery] HomeToplamaQueryRequest request)
+        {
+            var res = await _mediator.Send(request);
+            return Ok(res);
+        }
+
+
+        [HttpGet]
+        [Route ("cıkarma-islemi")]
+        public async Task<IActionResult> Cikarma([FromQuery] HomeCikarmaQueryRequest request)
+        {
+            var res = await _mediator.Send(request);
+            return Ok(res);
+        }
     }
 }
 
