@@ -8,50 +8,49 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace BaseProject.Api.WebApi.Controllers
+namespace BaseProject.Api.WebApi.Controllers;
+
+[Route("api/[controller]")]
+public class HomeController : ControllerBase
 {
-    [Route("api/[controller]")]
-    public class HomeController : ControllerBase
+    private readonly IMediator _mediator;
+
+    public HomeController(IMediator mediator)
     {
-        private readonly IMediator _mediator;
+        _mediator = mediator;
+    }
 
-        public HomeController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
-
-        [HttpGet]
-        [Route("carpma-islemi")]
-        public async Task<IActionResult> Carpma([FromQuery] HomeCarpmaQueryRequest request) 
+    [HttpGet]
+    [Route("carpma-islemi")]
+    public async Task<IActionResult> Carpma([FromQuery] HomeCarpmaQueryRequest request) 
 	    {
-            var res = await _mediator.Send(request);
-            return Ok(res);	    
+        var res = await _mediator.Send(request);
+        return Ok(res);	    
 	    }
 
-        [HttpGet]
-        [Route("bolme-islemi")]
-        public async Task<IActionResult> Bolme([FromQuery] HomeBolmeQueryRequest request)
-        {
-            var res = await _mediator.Send(request);
-            return Ok(res);
-        }
-        
+    [HttpGet]
+    [Route("bolme-islemi")]
+    public async Task<IActionResult> Bolme([FromQuery] HomeBolmeQueryRequest request)
+    {
+        var res = await _mediator.Send(request);
+        return Ok(res);
+    }
+    
 	   [HttpGet]
-       [Route ("toplama-islemi")]
-       public async Task<IActionResult> Toplama([FromQuery] HomeToplamaQueryRequest request)
-        {
-            var res = await _mediator.Send(request);
-            return Ok(res);
-        }
+   [Route ("toplama-islemi")]
+   public async Task<IActionResult> Toplama([FromQuery] HomeToplamaQueryRequest request)
+    {
+        var res = await _mediator.Send(request);
+        return Ok(res);
+    }
 
 
-        [HttpGet]
-        [Route ("cıkarma-islemi")]
-        public async Task<IActionResult> Cikarma([FromQuery] HomeCikarmaQueryRequest request)
-        {
-            var res = await _mediator.Send(request);
-            return Ok(res);
-        }
+    [HttpGet]
+    [Route ("cıkarma-islemi")]
+    public async Task<IActionResult> Cikarma([FromQuery] HomeCikarmaQueryRequest request)
+    {
+        var res = await _mediator.Send(request);
+        return Ok(res);
     }
 }
 
