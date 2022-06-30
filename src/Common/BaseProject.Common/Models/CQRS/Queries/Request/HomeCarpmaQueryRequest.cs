@@ -4,7 +4,7 @@ using MediatR;
 
 namespace BaseProject.Common.Models.CQRS.Queries.Request
 {
-    public class HomeCarpmaQueryRequest : IRequest<HomeCarpmaQueryResponse>
+    public class HomeCarpmaQueryRequest : IRequest<CommonMathResponse>
     {
         public int Sayi1 { get; set; }
         public int Sayi2{ get; set; }

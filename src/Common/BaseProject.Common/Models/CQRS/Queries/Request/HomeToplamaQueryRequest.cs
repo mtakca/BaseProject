@@ -4,7 +4,7 @@ using MediatR;
 
 namespace BaseProject.Common.Models.CQRS.Queries.Request
 {
-    public class HomeToplamaQueryRequest : IRequest<HomeToplamaQueryResponse>
+    public class HomeToplamaQueryRequest : IRequest<CommonMathResponse>
     {
         public int Sayi1 { get; set; }
         public int Sayi2 { get; set; }

@@ -5,11 +5,11 @@ using MediatR;
 
 namespace BaseProjct.Api.Application.Features.CQRS.Handlers.Queries
 {
-    public class HomeBolmeQueryHandler : IRequestHandler<HomeBolmeQueryRequest, HomeBolmeQueryResponse>
+    public class HomeBolmeQueryHandler : IRequestHandler<HomeBolmeQueryRequest, CommonMathResponse>
     {
-        public Task<HomeBolmeQueryResponse> Handle(HomeBolmeQueryRequest request, CancellationToken cancellationToken)
+        public Task<CommonMathResponse> Handle(HomeBolmeQueryRequest request, CancellationToken cancellationToken)
         {
-            var response = new HomeBolmeQueryResponse()
+            var response = new CommonMathResponse()
             {
                 Sonuc = request.Sayi1 / request.Sayi2,
                 Zitti = "Çarpma"
