@@ -29,7 +29,7 @@ namespace BaseProject.Api.WebApi.Controllers
 	    }
 
         [HttpGet]
-        [Route("bölme-islemi")]
+        [Route("bolme-islemi")]
         public async Task<IActionResult> Bolme([FromQuery] HomeBolmeQueryRequest request)
         {
             var res = await _mediator.Send(request);

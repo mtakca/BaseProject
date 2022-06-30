@@ -13,6 +13,7 @@
     <None Remove="Models\CQRS\Queries\Requeries\" />
     <None Remove="Models\CQRS\Queries\Reponse\" />
     <None Remove="MediatR" />
+    <None Remove="Models\CQRS\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -20,6 +21,7 @@
     <Folder Include="Models\CQRS\Queries\" />
     <Folder Include="Models\CQRS\Queries\Request\" />
     <Folder Include="Models\CQRS\Queries\Reponse\" />
+    <Folder Include="Models\CQRS\Common\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="10.0.1" />
