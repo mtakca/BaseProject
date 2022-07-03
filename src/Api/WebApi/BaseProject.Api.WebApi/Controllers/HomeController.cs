@@ -23,10 +23,10 @@ public class HomeController : ControllerBase
     [HttpGet]
     [Route("carpma-islemi")]
     public async Task<IActionResult> Carpma([FromQuery] HomeCarpmaQueryRequest request) 
-	    {
+	{
         var res = await _mediator.Send(request);
         return Ok(res);	    
-	    }
+	}
 
     [HttpGet]
     [Route("bolme-islemi")]
@@ -36,17 +36,17 @@ public class HomeController : ControllerBase
         return Ok(res);
     }
     
-	   [HttpGet]
+   [HttpGet]
    [Route ("toplama-islemi")]
    public async Task<IActionResult> Toplama([FromQuery] HomeToplamaQueryRequest request)
-    {
+   {
         var res = await _mediator.Send(request);
         return Ok(res);
-    }
+   }
 
 
     [HttpGet]
-    [Route ("cıkarma-islemi")]
+    [Route ("cikarma-islemi")]
     public async Task<IActionResult> Cikarma([FromQuery] HomeCikarmaQueryRequest request)
     {
         var res = await _mediator.Send(request);

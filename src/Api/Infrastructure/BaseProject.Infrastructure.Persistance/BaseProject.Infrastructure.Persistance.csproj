@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\BaseProjct.Api.Application\BaseProjct.Api.Application.csproj" />
+    <ProjectReference Include="..\..\Core\BaseProject.Api.Domain\BaseProject.Api.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Common\BaseProject.Common\BaseProject.Common.csproj" />
+  </ItemGroup>
 </Project>

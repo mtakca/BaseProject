@@ -6,9 +6,8 @@ namespace BaseProject.Common.Models.CQRS.Queries.Request;
 
 public class HomeBolmeQueryRequest : IRequest<CommonMathResponse>
 {
-
-        public int Sayi1 { get; set; }
-        public int Sayi2 { get; set; }
+    public int Sayi1 { get; set; }
+    public int Sayi2 { get; set; }
 
 }
 

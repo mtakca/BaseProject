@@ -15,6 +15,9 @@
     <None Remove="Features\CQRS\Handlers\" />
     <None Remove="Features\CQRS\Handlers\Commands\" />
     <None Remove="Features\CQRS\Handlers\Queries\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Interfaces\Helpers\" />
+    <None Remove="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="10.0.1" />
@@ -27,6 +30,9 @@
     <Folder Include="Features\CQRS\Handlers\" />
     <Folder Include="Features\CQRS\Handlers\Commands\" />
     <Folder Include="Features\CQRS\Handlers\Queries\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Helpers\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\BaseProject.Common\BaseProject.Common.csproj" />
